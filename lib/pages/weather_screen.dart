@@ -40,7 +40,6 @@ class WeatherScreen extends StatelessWidget {
           Placeholder(
             fallbackHeight: 150,
           ),
-
         ],
       ),
 
