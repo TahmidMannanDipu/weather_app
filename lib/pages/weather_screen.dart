@@ -27,7 +27,7 @@ class WeatherScreen extends StatelessWidget {
         child: Column(
           spacing: 16,
           children: [
-            // main card
+
            SizedBox(
              width: double.infinity,
              child: Card(
