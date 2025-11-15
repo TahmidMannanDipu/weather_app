@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 
@@ -15,73 +13,35 @@ class WeatherScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: (){
-
+              print("Refresh");
             },
             icon: Icon(Icons.refresh),
           ),
         ],
       ),
 
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          spacing: 16,
-          children: [
-            // main card
-            SizedBox(
-              width: double.infinity,
-              child: Card(
-                elevation: 10,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: BackdropFilter(
-                    filter: ImageFilter.blur(
-                      sigmaX: 10, sigmaY: 10,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 16.0),
-                      child: Column(
-                        spacing: 8,
-                        children: [
-                          Text("300° F",style: TextStyle(
-                            fontSize: 32,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          ),
-                          Icon(
-                            Icons.cloud,
-                            size: 72,
-                          ),
-                          Text("Rain",style: TextStyle(
-                            fontSize: 24,
-                          ),),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            // weather forecast
-            Placeholder(
-              fallbackHeight: 150,
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            // additional info
-            Placeholder(
-              fallbackHeight: 150,
-            ),
+      body: Column(
+        children: [
+          // main card
+          Placeholder(
+            fallbackHeight: 250,
+          ),
+    const SizedBox(
+      height: 16,
+    ),
+          // weather forecast
+          Placeholder(
+            fallbackHeight: 150,
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          // additional info
+          Placeholder(
+            fallbackHeight: 150,
+          ),
 
-          ],
-        ),
+        ],
       ),
 
     );
