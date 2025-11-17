@@ -6,9 +6,9 @@ class ReUseCard extends StatelessWidget {
 
   final String? time;
   final IconData? icon;
-  final String? latitude;
+  final String? temperature;
 
-  const ReUseCard({super.key, required this.time,required this.icon, required this.latitude});
+  const ReUseCard({super.key, required this.time,required this.icon, required this.temperature});
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +25,15 @@ class ReUseCard extends StatelessWidget {
         child: Column(
           spacing: 16,
           children: [
-            Text("$time",style: TextStyle(
+            Text("$time",
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,
             ),),
             Icon(icon,size: 32,),
-            Text("$latitude",style: TextStyle(
+            Text("$temperature",style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,
             ),
